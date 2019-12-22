@@ -24,6 +24,8 @@ var app = {
       this.onDeviceReady.bind(this),
       false
     );
+
+    document.addEventListener("backbutton", onBackBtnClick, false);
   },
 
   // deviceready Event Handler
@@ -32,6 +34,11 @@ var app = {
   // 'pause', 'resume', etc.
   onDeviceReady: function() {
     this.receivedEvent("deviceready");
+  },
+  onBackBtnClick: function(e) {
+  alert('ololo');
+   e.preventDefault();
+   return null
   },
 
   // Update DOM on a Received Event
@@ -47,12 +54,8 @@ var app = {
 
     var ref = cordova.InAppBrowser.open(
       "http://80.ease.hysdev.com/",
-      // "_blank",
-      "location=no",
-      "toolbar=no",
-      "clearcache=no",
-      "clearsessioncache=no",
-      "cleardata=no",
+       "_blank",
+      "location=no,hideurlbar=yes,toolbar=no,clearcache=no,clearsessioncache=no,cleardata=no",
     );
   }
 };
