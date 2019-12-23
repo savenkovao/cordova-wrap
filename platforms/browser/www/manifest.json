@@ -1,11 +1,22 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "HelloWorld",
-  "short_name": "HelloWorld",
-  "version": "com.example.hello",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
-  "icons": [],
+  "name": "EaseUp Check-in",
+  "short_name": "EaseUp Check-in",
+  "version": "EaseUpCheck-in",
+  "description": "EaseUp salon check-in application.",
+  "author": "EaseUp Team",
+  "icons": [
+    {
+      "src": "www\\img\\logo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "www\\img\\logo.png",
+      "type": "image/png",
+      "sizes": "255x255"
+    }
+  ],
   "start_url": "index.html"
 }

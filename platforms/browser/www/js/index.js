@@ -24,8 +24,6 @@ var app = {
       this.onDeviceReady.bind(this),
       false
     );
-
-    document.addEventListener("backbutton", onBackBtnClick, false);
   },
 
   // deviceready Event Handler
@@ -36,32 +34,24 @@ var app = {
     this.receivedEvent("deviceready");
   },
 
-  onBackBtnClick: function() {
-   return
-  },
-
   // Update DOM on a Received Event
   receivedEvent: function(id) {
-    // var parentElement = document.getElementById(id);
-    // var listeningElement = parentElement.querySelector(".listening");
-    // var receivedElement = parentElement.querySelector(".received");
-
-    // listeningElement.setAttribute("style", "display:none;");
-    // receivedElement.setAttribute("style", "display:block;");
-
-    // console.log("Received Event: " + id);
-
     var ref = cordova.InAppBrowser.open(
       "http://80.ease.hysdev.com/",
        "_blank",
       "location=no,hideurlbar=yes,toolbar=no,clearcache=no,clearsessioncache=no,cleardata=no",
     );
 
-    ref.addEventListener('exit', ()=>{
+    ref.addEventListener('exit', onExit, false);
+
+    var that = this;
+    function onExit() {
         setTimeout(()=>{
-            this.receivedEvent("deviceready");
+            that.receivedEvent("deviceready");
+
+            ref.removeEventListener('exit', onExit, false);
         },100)
-    });
+    }
   }
 };
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.hello" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.android.EaseUpCheckIn" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EaseUp Check-in</name>
     <description>
         EaseUp salon check-in application.
@@ -16,6 +16,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon id="icon" src="www/img/logo.png" />
+    <icon height="255" id="logo" src="www/img/logo.png" width="255" />
     <platform name="android">
         <allow-intent href="market:*" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
