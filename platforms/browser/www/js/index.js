@@ -24,34 +24,69 @@ var app = {
       this.onDeviceReady.bind(this),
       false
     );
+    this.addListeners();
   },
+  inited: false,
 
   // deviceready Event Handler
   //
   // Bind any cordova events here. Common events are:
   // 'pause', 'resume', etc.
   onDeviceReady: function() {
-    this.receivedEvent("deviceready");
+//    this.receivedEvent("deviceready");
+//    this.addListeners();
   },
+  addListeners: function(){
+    var that = this;
 
+    document.addEventListener("online", onOnline, false);
+    document.addEventListener("offline", onOffline, false);
+
+    function onOffline() {
+        if(that.inited) return;
+        that.toggleBlocks(true);
+    }
+
+    function onOnline() {
+    console.log('app init - ', that.inited);
+        if(that.inited) return;
+        that.receivedEvent("deviceready");
+    }
+
+    function toggleBlocks(networkShow, loaderShow) {
+        var loader = document.getElementById('loader');
+        var network = document.getElementById('no-network');
+        loader.style.display = loaderShow ? 'block' : 'none';
+        network.style.display = networkShow ? 'block' : 'none';
+    }
+  },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
+    this.inited = true;
     var ref = cordova.InAppBrowser.open(
-      "http://80.ease.hysdev.com/",
+      "http://80.ease.hysdev.com?in-app-load=true",
        "_blank",
       "location=no,hideurlbar=yes,toolbar=no,clearcache=no,clearsessioncache=no,cleardata=no",
     );
 
+    this.toggleBlocks();
+
     ref.addEventListener('exit', onExit, false);
 
     var that = this;
+
     function onExit() {
         setTimeout(()=>{
             that.receivedEvent("deviceready");
-
             ref.removeEventListener('exit', onExit, false);
-        },100)
+        },100);
     }
+  },
+  toggleBlocks: function(networkShow, loaderShow) {
+      var loader = document.getElementById('loader');
+      var network = document.getElementById('no-network');
+      loader.style.display = loaderShow ? 'block' : 'none';
+      network.style.display = networkShow ? 'block' : 'none';
   }
 };
 

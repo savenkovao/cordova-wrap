@@ -2,15 +2,31 @@
 <html>
   <head>
     <title>EaseUp Check-in</title>
+    <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
   </head>
   <body>
-  <div id="app-loader" class="loader">
-    <div class="lds-ripple">
-      <div></div>
-      <div></div>
+
+  <div id="loader">
+    <div class="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="no-network" style="display: none">
+    <div class="no-network">
+      <h2>
+        There is no internet connection. <br>
+        Turn on network to enable application.
+      </h2>
     </div>
   </div>
   </body>

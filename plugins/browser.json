@@ -12,6 +12,9 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "EaseUpCheck-in"
     }
   },
   "dependent_plugins": {}

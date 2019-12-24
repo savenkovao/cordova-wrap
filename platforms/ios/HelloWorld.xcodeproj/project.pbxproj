@@ -19,6 +19,10 @@
 		BEAFB34CEB38461DBF634E1C /* CDVUIInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FB61B4DE8CD549A4ADF8DCE2 /* CDVUIInAppBrowser.m */; };
 		529BD38F45AB4A86BDA26B09 /* CDVWKInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C638F1EBD415427F86C1B630 /* CDVWKInAppBrowser.m */; };
 		A70E736503454B2D9EDFCD8E /* CDVWKInAppBrowserUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E09AC5D02C4ACBA44F26DC /* CDVWKInAppBrowserUIDelegate.m */; };
+		C0DEB879F98B442B85AB606D /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D12E5B7F104544D5ABCC61FE /* CDVConnection.m */; };
+		FA4CF7E3B6EF421AADCE5BF3 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E15E8E76A5A423FB669C18E /* CDVReachability.m */; };
+		5EB318C0848F433E9194EF2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1CAD3307CD49D599EB6ACF /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		15C442E3BF014AC4865B692F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C43ABF1184F05BE1AADBD /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,12 @@
 		A39F62E6E75E47189C370732 /* CDVUIInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVUIInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVUIInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		68007492EDD14AA5B1B1CEA8 /* CDVWKInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVWKInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVWKInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		05087296452F4EB1937AB31E /* CDVWKInAppBrowserUIDelegate.h */ = {isa = PBXFileReference; name = "CDVWKInAppBrowserUIDelegate.h"; path = "cordova-plugin-inappbrowser/CDVWKInAppBrowserUIDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D12E5B7F104544D5ABCC61FE /* CDVConnection.m */ = {isa = PBXFileReference; name = "CDVConnection.m"; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1E15E8E76A5A423FB669C18E /* CDVReachability.m */ = {isa = PBXFileReference; name = "CDVReachability.m"; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0024AD4CDB2A432DB4E4950B /* CDVConnection.h */ = {isa = PBXFileReference; name = "CDVConnection.h"; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F166D5EF9B584596958A4D87 /* CDVReachability.h */ = {isa = PBXFileReference; name = "CDVReachability.h"; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2E1CAD3307CD49D599EB6ACF /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A69C43ABF1184F05BE1AADBD /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				5EB318C0848F433E9194EF2D /* SystemConfiguration.framework in Frameworks */,
+				15C442E3BF014AC4865B692F /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +168,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1CAD3307CD49D599EB6ACF /* SystemConfiguration.framework */,
+				A69C43ABF1184F05BE1AADBD /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +208,10 @@
 				A39F62E6E75E47189C370732 /* CDVUIInAppBrowser.h */,
 				68007492EDD14AA5B1B1CEA8 /* CDVWKInAppBrowser.h */,
 				05087296452F4EB1937AB31E /* CDVWKInAppBrowserUIDelegate.h */,
+				D12E5B7F104544D5ABCC61FE /* CDVConnection.m */,
+				1E15E8E76A5A423FB669C18E /* CDVReachability.m */,
+				0024AD4CDB2A432DB4E4950B /* CDVConnection.h */,
+				F166D5EF9B584596958A4D87 /* CDVReachability.h */,
 			);
 			name = Plugins;
 			path = "HelloWorld/Plugins";
@@ -324,6 +342,8 @@
 				BEAFB34CEB38461DBF634E1C /* CDVUIInAppBrowser.m in Sources */,
 				529BD38F45AB4A86BDA26B09 /* CDVWKInAppBrowser.m in Sources */,
 				A70E736503454B2D9EDFCD8E /* CDVWKInAppBrowserUIDelegate.m in Sources */,
+				C0DEB879F98B442B85AB606D /* CDVConnection.m in Sources */,
+				FA4CF7E3B6EF421AADCE5BF3 /* CDVReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +377,7 @@
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.android.EaseUpCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,7 +400,7 @@
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.android.EaseUpCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,7 +445,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WK_WEB_VIEW_ONLY = 0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.android.EaseUpCheckIn;
 			};
 			name = Debug;
 		};
@@ -466,7 +486,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WK_WEB_VIEW_ONLY = 0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.android.EaseUpCheckIn;
 			};
 			name = Release;
 		};

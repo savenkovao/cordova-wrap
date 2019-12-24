@@ -18,6 +18,7 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    box-sizing: border-box;
 }
 
 body {
@@ -159,4 +160,18 @@ h1 {
     height: 58px;
     opacity: 0;
   }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-network {
+    padding: 15px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

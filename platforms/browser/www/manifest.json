@@ -3,17 +3,17 @@
   "display": "standalone",
   "name": "EaseUp Check-in",
   "short_name": "EaseUp Check-in",
-  "version": "EaseUpCheck-in",
+  "version": "com.android.EaseUpCheckIn",
   "description": "EaseUp salon check-in application.",
   "author": "EaseUp Team",
   "icons": [
     {
-      "src": "www\\img\\logo.png",
+      "src": "www/img/logo.png",
       "type": "image/png",
       "sizes": "undefinedxundefined"
     },
     {
-      "src": "www\\img\\logo.png",
+      "src": "www/img/logo.png",
       "type": "image/png",
       "sizes": "255x255"
     }
